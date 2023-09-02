@@ -51,15 +51,15 @@ export const SendEmail = async (request, response) => {
         <mj-section background-color="#ffffff" background-repeat="repeat" background-size="auto" padding="0px 0px 20px 0px" text-align="center" vertical-align="top">
             <mj-column>
                 <mj-text>
-                    <h3 margin-botton="3rem" >Nome do Solicitante ${name}</h3>
-                    <h3 margin-botton="3rem" >Email do Solicitante ${email}</h3>
-                    <h3 margin-botton="3rem" >Telefone do Solicitante ${phone}</h3>
+                    <h3 margin-botton="3rem" >Nome do Solicitante: ${name}</h3>
+                    <h3 margin-botton="3rem" >Email do Solicitante: ${email}</h3>
+                    <h3 margin-botton="3rem" >Telefone do Solicitante: ${phone}</h3>
                 </mj-text>
 
                 <mj-text>
                     <h2 margin-botton="1rem" class="Title-list">Informações do Projeto:</h2>
                     <div margin-botton="1.5rem">
-                        <h2 margin-botton="1rem" class="Title-list">Dúvida sobre ${service}</h2>
+                        <h5 margin-botton="1rem" class="Title-list">Dúvida sobre ${service}</h5>
                         <p>${message}</p>
                     </div>
                 </mj-text>
@@ -85,7 +85,7 @@ export const SendEmail = async (request, response) => {
   }
 
   const mailOptions = {
-    from: email,
+    from: process.env.EMAIL,
     to: process.env.EMAIL,
     subject: `Solicitação de Serviço: ${service}`,
     html,
