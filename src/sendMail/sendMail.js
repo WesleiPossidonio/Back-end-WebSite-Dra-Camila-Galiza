@@ -85,7 +85,7 @@ export const SendEmail = async (request, response) => {
   }
 
   const mailOptions = {
-    from: process.env.EMAIL,
+    from: email,
     to: process.env.EMAIL,
     subject: `Solicitação de Serviço: ${service}`,
     html,
