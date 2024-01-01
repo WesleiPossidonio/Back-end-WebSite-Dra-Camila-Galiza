@@ -57,9 +57,8 @@ export const SendEmail = async (request, response) => {
                 </mj-text>
 
                 <mj-text>
-                    <h2 margin-botton="1rem" class="Title-list">Informações do Projeto:</h2>
                     <div margin-botton="1.5rem">
-                        <h5 margin-botton="1rem" class="Title-list">Dúvida sobre ${service}</h5>
+                        <h3 margin-botton="1rem" class="Title-list">Dúvida sobre: ${service}</h3>
                         <p>${message}</p>
                     </div>
                 </mj-text>
